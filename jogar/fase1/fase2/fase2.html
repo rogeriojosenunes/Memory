@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="conteiner">
+        <div class="time" id="minutos">00</div>
+        <div class="separador">:</div>
+
+        <div class="time" id="segundos">00</div>
+        <div class="separador">:</div>
+
+        <div class="time" id="milesimos">000</div>
+    </div>
     <div id="caixa"> 
         <div class="carta" id="card0">
             <div class="face back"></div>
@@ -40,7 +49,27 @@
         
         <img src="img/match.png" id="imgMatch">
 
-        <div id="modalGameOver">
+        
+
+       
+    </div>
+    <div id="modalGameOver">
+
+            <div class="lvl">
+               
+                <button><a href="fase2.html">Jogar novament</a></button>
+
+            </div>  
+
+            <div class="lvl">
+                
+                <button><a href="../../../index.html">Menu Pincipal</a></button>
+
+            </div>
+           
+        </div>
+
+        <div id="modalNextFase">
 
             <div class="lvl">
                 <button><a href="fase3/fase3.html">Level 3</a></button>
@@ -49,10 +78,13 @@
             <div class="lvl">
                 <button><a href="fase2.html">Jogar novament</a></button>
             </div>
-        </div>
+            <div class="lvl">
+                
+                <button><a href="../../../index.html">Menu Pincipal</a></button>
 
-       
-    </div>
+            </div>
+
+        </div>
      
     <script src="script.js"></script>
 </body>

@@ -5,6 +5,35 @@
 body{
     background: url(img/fundo.jpg);
 }
+#conteiner{
+    display: flex;
+    width: 310px;
+    height: 100px;
+    background: url(img/fundo.jpg);
+    align-items: center;
+}
+.time{
+    display: flex;
+    display: flex;
+    font-size: 55px;
+    font-weight: bold;
+    color: #333;
+}
+.time{
+display: flex;
+margin-right: 10px;
+align-items: center;
+justify-content: center;
+color: #172953;
+min-height: 90px;
+}
+.separador{
+    font-size: 55px;
+    color: #0e0f0f;
+}
+#milesimos{
+    font-size: 30px;
+}
 #caixa{
     width: 830px;
     height: 495px;
@@ -46,13 +75,21 @@ body{
 .face.flipped.match{
     box-shadow: 0 0 10px #0f0;
 }
-#modalGameOver{
+#modalNextFase{
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgb(0, 0, 0, 0.5);
     z-index: -2;
+}
+#modalGameOver{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: -3;
 }
 #imgMatch{
     position: relative;
@@ -78,7 +115,8 @@ button{
     background-color: rgb(66, 68, 81);
     border-radius: 10px;
 }
-button:houver{
+button:hover{
+    transform: scale(1.1);
     box-shadow: 0 0 10px aqua;
 }
 a{ 

@@ -1,12 +1,23 @@
 (function(){
 
+    var interval;
+    var minutos = 0;
+    var segundos = 0;
+    var milesimos = 0;
+
     var matches = 0;
 
     var images = [];
 
     var flippedCard = [];
+    conometro();
+
+    var minutosLt = document.querySelector("#minutos");
+    var segundosLt = document.querySelector("#segundos");
+    var milesimosLt = document.querySelector("#milesimos");
 
     var modalGameOver = document.querySelector("#modalGameOver");
+    var modalNextFase = document.querySelector("#modalNextFase");
 
     var imgMatchSing = document.querySelector("#imgMatch")
 
@@ -20,6 +31,11 @@
     startGame ();
 
     function startGame(){
+
+        interval;
+        minutos = 0;
+        segundos = 0;
+        milesimos = 0;
 
         matches = 0;
 
@@ -47,7 +63,8 @@
             frontFace[i].setAttribute("id", images[i].id);
 
         }
-        modalGameOver.style.zIndex = -2;
+        modalNextFase.style.zIdex = -2;
+        modalGameOver.style.zIdex = -3;
     }
     function randomSort(images){
         var newArray = [];
@@ -89,7 +106,8 @@
                 flippedCard = [];
 
                 if(matches === 5){
-                   gameOver();
+                   nextFase();
+                   zeraTime();
                 }
             }
         }
@@ -104,9 +122,46 @@
   
             
     }
+    function conometro(){
+        interval = setInterval(() => {
+            if(true){
+                milesimos += 10;
+                if(milesimos === 1000){
+                    segundos++;
+                    milesimos = 0;
+                }
+                if(segundos === 12){
+                    gameOver();
+                    zeraTime();
+                }
+                minutosLt.textContent = formTime(minutos);
+                segundosLt.textContent = formTime(segundos);
+                milesimosLt.textContent = milesimos;
+            }
+        }, 10);
+    }
+    function formTime(time){
+        return time < 10 ? `0${time}` : time;
+    }
+    function zeraTime(){
+        clearInterval(interval);
+        minutos = 0;
+        segundos = 0;
+        milesimos = 0;
+
+        minutosLt.textContent = minutos;
+        segundosLt.textContent = segundos;
+        milesimosLt.textContent = milesimos;
+
+    }
     function gameOver(){
         setTimeout(function(){
-            modalGameOver.style.zIndex = 10;
+            modalGameOver.style.zIndex = 8;
+        },500);
+    }
+    function nextFase(){
+        setTimeout(function(){
+            modalNextFase.style.zIndex = 10;
         },500);
     }
     function matchCardSing(){
