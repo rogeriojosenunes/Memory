@@ -1,0 +1,57 @@
+body{
+    background:url(img/fgh.jpg) ;
+}
+h1{
+    text-align: center;
+    font-size: 3em;
+}
+#imgLogo{
+    width: 500px;
+    height: 228px;
+    margin: 10px auto;
+   
+}
+#caixa{
+    position:relative;
+    
+    margin: 10px auto; 
+    width: 630px;
+    height: 300px;
+}
+button{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(66, 68, 81);
+    border-radius: 10px;font-size: 20px ;
+    color: chocolate;
+    
+}
+button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px aqua;
+}
+a{ 
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 20px ;
+    color: rgb(218, 190, 65);
+}
+.ton{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+}
+.botoes{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#bt{
+    position: absolute;
+    width: 210px;
+    height: 50px;
+}
+
+

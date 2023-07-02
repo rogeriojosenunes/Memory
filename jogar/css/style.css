@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(tt.jpg);
+    text-align: center;
+}
+#taboleiro{
+    width: 1325px;
+    height: 990px;
+    position: relative;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: #5e4a16;
+}
+.carta{
+    width: 160px;
+    height: 240px;
+    position: absolute;
+    border-radius: 10px;
+    perspective: 600px;
+    
+}
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transition: all 1s;
+    backface-visibility: hidden;
+}
+.back{
+    background: url(../tuj.jpg);
+    
+}
+
+.back.flipped{
+    transform: rotateY(180deg);
+}
+.front{
+    
+    transform: rotateY(-180deg);    
+}
+
+.front.flipped{
+    transform: rotateY(0deg);
+}
+.carta:hover{
+    box-shadow: 0 0 10px #aaa;
+}
+
+.face.flipped.match{
+    box-shadow: 0 0 10px #0f0;
+}
+
+a{  
+    
+    position: absolute;
+    top: 20px;
+    left: 15px;
+
+    
+}
+#bt1{
+    width: 100px;
+    height: 50px;
+    background-color:cornflowerblue;
+    position: absolute;
+}
+button:hover{
+    box-shadow: 0 0 10px aqua;
+}
+#modalGameOver{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rba(0,0,0,2);
+    z-index: -2;
+}
+#imggameover{
+    margin-top: 100px;
+}
+#imgMatch{
+    position: relative;
+    top: 250px;
+    transition-property: top, opacity;
+    transition-duration: 1.5s;
+    opacity: 1;
+    z-index: -1;
+}

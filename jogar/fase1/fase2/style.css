@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(img/fundo.jpg);
+}
+#caixa{
+    width: 500px;
+    height: 495px;
+    border-radius: 10px;
+    position: relative;
+    margin: 10px auto;
+    background-color: chocolate;
+
+}
+.carta{
+    position: absolute;
+    width: 160px;
+    height: 240px;
+    border-radius: 10px;
+    perspective: 600px;
+
+}
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transition: all 1s;
+    backface-visibility: hidden;
+}
+.back{
+    background: url(img/verso.jpg);
+}
+.back.flipped{
+    transform: rotateY(180deg);
+}
+.front{
+    transform: rotateY(-180deg);
+}
+.front.flipped{
+    transform: rotateY(0);
+}
+.face.flipped.match{
+    box-shadow: 0 0 10px green;
+}
+#modalGameOver{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb( 0, 0, 0, 0.5);
+    z-index: -2;
+}
+#imgMatch{
+    position: relative;
+    top: 300px;
+    transition-property: top, opacity;
+    transition-duration: 1.5s;
+    opacity: 1;
+    z-index: -1;
+}
+.lvl{
+    text-align: center;
+    position: relative;
+    width: 100px;
+    height:50px;
+    margin: 20px auto;
+    top: 150px;
+    left: -50px;
+}
+button{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(66, 68, 81);
+    border-radius: 10px;
+}
+button:houver{
+    box-shadow: 0 0 10px aqua;
+}
+a{ 
+    font-size: 2em ;
+    color: chocolate;
+}

@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+    font-size: 50px;
+    position:relative;
+}
+body{
+    background: url(../fgh.jpg);
+}
+p{
+    color: rgb(31, 17, 20);
+    text-align: center;
+    position:absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+    font-size: 30px;
+}
+#caixa{
+    border: solid 10px rgb(122, 41, 41);
+    border-radius: 10px;
+    position:absolute;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 50%; 
+    display: flex;
+    width: 500px;
+    height: 500px;
+    background-color: darkslategray;
+}

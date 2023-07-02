@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(img/fundo.jpg);
+}
+#conometro{
+    display: flex;
+    width: 310px;
+    height: 100px;
+    background: url(img/verso.jpg);
+    align-items: center;
+
+    
+   
+}
+.time{
+    display: flex;
+    font-size: 55px;
+    font-weight: bold;
+    color: #333;
+    
+}
+.time{
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    color: #172953;
+    min-height: 90px;
+}
+.separador{
+    font-size: 55px;
+    color: #0e0f0f;
+}
+#milesimos{
+    font-size: 30px;
+}
+#caixa{
+    width: 995px;
+    height: 495px;
+    margin: 10px auto;
+    position: relative;
+    border-radius: 10px;
+    background-color: chocolate;
+}
+.carta{
+    width: 160px;
+    height: 240px;
+    position: absolute;
+    border-radius: 10px;
+    perspective: 600px;
+    cursor: pointer;
+}
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transition: all 1s;
+    backface-visibility: hidden;
+
+}
+.back{
+    background: url(img/verso.jpg);
+}
+.back.flipped{
+    transform: rotateY(180deg);
+}
+.front{
+    transform: rotateY(-180deg);
+}
+.front.flipped{
+    transform: rotateY(0);
+}
+.carta:hover{
+    box-shadow: 0 0 10px #aaa ;
+}
+.face.flipped.match{
+    box-shadow: 0 0 20px green;
+}
+#modalNextFase{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: -2;
+}
+#modalGameOver{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: -3;
+}
+#imgMatch{
+    position: relative;
+    top: 300px;
+    transition-property: top,opacity;
+    transition-duration: 1.5s;
+    z-index: -1;
+}
+.lvl{
+    text-align: center;
+    position: relative;
+    width: 200px;
+    height:50px;
+    margin: 20px auto;
+    top: 150px;
+    left: -50px;
+}
+button{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(66, 68, 81);
+    border-radius: 10px;font-size: 20px ;
+    color: chocolate;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px aqua;
+}
+a{ 
+    font-size: 20px ;
+    color: chocolate;
+}
