@@ -136,7 +136,7 @@ function relojo(){
                 
                 milesimos = 0;
             }
-            if(segundos === 10){
+            if(segundos === 15){
 
                 segundos = 0;
                 gameOver(); 
