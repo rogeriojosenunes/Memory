@@ -131,7 +131,7 @@
                     segundos++;
                     milesimos =0;
                 }
-                if(segundos === 7){
+                if(segundos === 5){
                     
                     segundos = 0;
                     gameOver();

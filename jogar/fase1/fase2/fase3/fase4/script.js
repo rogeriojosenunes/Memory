@@ -136,11 +136,12 @@ function relojo(){
                 
                 milesimos = 0;
             }
-            if(segundos === 15){
+            if(segundos === 25){
 
                 segundos = 0;
                 gameOver(); 
-                zeraTime();   
+                zeraTime();
+                playSon();   
                    
             }
 
@@ -191,7 +192,7 @@ function relojo(){
         audio.play();
 
     }
-    playSon("lucyfer.mp3", true);
+    playSon("sons/son4.mp3", true);
     function nextFase(){
 
         modalNextFase.style.zIndex = 10;

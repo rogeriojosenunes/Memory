@@ -130,7 +130,7 @@
                     segundos++;
                     milesimos = 0;
                 }
-                if(segundos === 12){
+                if(segundos === 17){
                     gameOver();
                     zeraTime();
                 }
