@@ -5,40 +5,53 @@
 body{
     background: url(img/fundo.jpg);
 }
+#todo{
+    
+    width: 100%;
+    height: 100%;
+   
+    
+}
 #conteiner{
+    position: relative;
     display: flex;
-    width: 310px;
+    width: 300px;
     height: 100px;
-    background: url(img/fundo.jpg);
+    margin: 10px auto;
+    border: solid 10px chocolate;
+    border-radius: 10px;
+    background-color: rgb(7, 2, 10, 0.5);
     align-items: center;
 }
 .time{
     display: flex;
     display: flex;
+    
+    margin-left: 20px;
     font-size: 55px;
     font-weight: bold;
-    color: #333;
+    color:chocolate;
 }
 .time{
 display: flex;
 margin-right: 10px;
 align-items: center;
 justify-content: center;
-color: #172953;
+color:chocolate;
 min-height: 90px;
 }
 .separador{
     font-size: 55px;
-    color: #0e0f0f;
+    color: yellow;
 }
 #milesimos{
     font-size: 30px;
 }
 #caixa{
+    position: relative;
     width: 500px;
     height: 495px;
     border-radius: 10px;
-    position: relative;
     margin: 10px auto;
     background-color: chocolate;
 
@@ -76,6 +89,7 @@ min-height: 90px;
 }
 #modalNextFase{
     position: absolute;
+    border-radius: 10px;
     top: 0;
     width: 100%;
     height: 100%;
@@ -84,6 +98,7 @@ min-height: 90px;
 }
 #modalGameOver{
     position: absolute;
+    border-radius: 10px;
     top: 0;
     width: 100%;
     height: 100%;
@@ -92,7 +107,7 @@ min-height: 90px;
 }
 #imgMatch{
     position: relative;
-    top: 250px;
+    top: 300px;
     transition-property: top, opacity;
     transition-duration: 1.5s;
     opacity: 1;
@@ -113,7 +128,8 @@ button{
     background-color: rgb(66, 68, 81);
     border-radius: 10px;
 }
-button:houver{
+button:hover{
+    transform: scale(1.1);
     box-shadow: 0 0 10px aqua;
 }
 a{ 

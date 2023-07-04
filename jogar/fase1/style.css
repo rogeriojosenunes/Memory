@@ -10,30 +10,35 @@ body{
     height: 100%;
 }
 #conteiner{
+    position: relative;
     display: flex;
-    width: 310px;
+    width: 300px;
     height: 100px;
-    background: url(img/fundo.jpg);
+    margin: 10px auto;
+    border: solid 10px chocolate;
+    border-radius: 10px;
+    background-color: rgb(7, 2, 10, 0.5);
     align-items: center;
 }
 .time{
     display: flex;
     display: flex;
+    margin-left: 20px;
     font-size: 55px;
     font-weight: bold;
-    color: #333;
+    color:chocolate;
 }
 .time{
 display: flex;
 margin-right: 10px;
 align-items: center;
 justify-content: center;
-color: #172953;
+color: chocolate;
 min-height: 90px;
 }
 .separador{
     font-size: 55px;
-    color: #0e0f0f;
+    color: yellow;
 }
 #milesimos{
     font-size: 30px;
@@ -85,7 +90,7 @@ min-height: 90px;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0, 0.5)
+    background-color: rgb(0, 0, 0,0.5)
     z-index = -2;
 }
 #modalGameOver{
@@ -93,7 +98,7 @@ min-height: 90px;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0, 0.5)
+     background-color: rgb(0, 0, 0,0.5)
     z-index = -3;
 }
 .lvl{

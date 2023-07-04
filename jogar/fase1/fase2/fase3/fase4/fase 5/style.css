@@ -5,6 +5,41 @@
 body{
     background: url(img/fundo.jpg);
 }
+#conometro{
+    position: relative;
+    display: flex;
+    width: 300px;
+    height: 100px;
+    margin: 10px auto;
+    border: solid 10px chocolate;
+    border-radius: 10px;
+    background-color: rgb(7, 2, 10, 0.5);
+    align-items: center;
+}
+.time{
+    display: flex;
+    display: flex;
+    
+    margin-left: 20px;
+    font-size: 55px;
+    font-weight: bold;
+    color: chocolate;
+}
+.time{
+display: flex;
+margin-right: 10px;
+align-items: center;
+justify-content: center;
+color:chocolate;
+min-height: 90px;
+}
+.separador{
+    font-size: 55px;
+    color: yellow;
+}
+#milesimos{
+    font-size: 30px;
+}
 #caixa{
     width: 1160px;
     height: 495px;
@@ -46,13 +81,23 @@ body{
 .face.flipped.match{
     box-shadow: 0 0 10px green;
 }
-#modalGameOver{
+#modalNextFase{
     position: absolute;
+    border-radius: 10px;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgb(0, 0, 0, 0.5);
     z-index: -2;
+}
+#modalGameOver{
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: -3;
 }
 #imgMatch{
     position: relative;
@@ -77,7 +122,8 @@ button{
     background-color: rgb(66, 68, 81);
     border-radius: 10px;
 }
-button:houver{
+button:hover{
+    transform: scale(1.1);
     box-shadow: 0 0 10px aqua;
 }
 a{ 

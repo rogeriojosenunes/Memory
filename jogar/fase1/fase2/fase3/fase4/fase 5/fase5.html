@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <audio src="sons/son3.mp3" autoplay loop></audio>
+    <div id="conometro">
+        <div class="time" id="minutos">00</div>
+        <div class="separador">:</div>
+        <div class="time" id="segundos">00</div>
+        <div class="separador">:</div>
+        <div class="time" id="milesimo">000</div>
+    </div>
     <div id="caixa">
 
         <div class="carta" id="card0">
@@ -80,17 +88,30 @@
         </div>
 
         <img src="img/match.png" id="imgMatch">
+        <div id="modalNextFase">
+            <div class="lvl">
+                <button><a href="fase6/fase6.html">Level 6</a></button>
+            </div>
+            <div class="lvl">
+                <button><a href="fase5.html">Jogar novament</a></button>
+            </div>
+            <div class="lvl">
+                <button><a href="../../../../../../index.html">Menu Principal</a></button>
+            </div>
+    
+        </div>
 
-    </div>
-    <div id="modalGameOver">
+        <div id="modalGameOver">
         <div class="lvl">
-            <button><a href="fase6/fase6.html">Level 6</a></button>
+            <button><a href="fase5/fase5.html">Jogar Novamente</a></button>
         </div>
         <div class="lvl">
-            <button><a href="fase5.html">Jogar novament</a></button>
+            <button><a href="../../../../../../index.html">Menu Principal</a></button>
         </div>
 
     </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

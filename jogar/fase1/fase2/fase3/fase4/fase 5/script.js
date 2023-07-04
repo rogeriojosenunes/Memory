@@ -1,12 +1,25 @@
 (function(){
+    var interval;
+
+    var minutos = 0;
+
+    var segundos =0;
+
+    var milesimo = 0;
+
     var matches = 0;
 
     var images = [];
 
     var flippedCard = [];
+    
+    var minutosLt = document.querySelector("#minutos");
+    var segundosLt = document.querySelector("#segundos");
+    var milesimoLt = document.querySelector("#milesimo");
 
     var acerto = document.querySelector("#imgMatch");
 
+    var modalNextFase = document.querySelector("#modalNextFase");
     var modalGameOver = document.querySelector("#modalGameOver");
     
     for(var i = 0; i < 14; i++){
@@ -17,8 +30,16 @@
         images.push(img);
     }
     starGame();
+    relogio();
 
     function starGame(){
+         interval;
+
+         minutos = 0;
+    
+         segundos =0;
+    
+         milesimo = 0;
 
         matches = 0;
 
@@ -38,7 +59,8 @@
             frontFace[i].style.background = "url('"+ images[i].src+"')";
             frontFace[i].setAttribute("id", images[i].id );
         }
-        modalGameOver.style.zIndex = -2;
+        modalNextFase.style.zIndex = -2;
+        modalGameOver.style.zIndex = -3;
     }
     function flipCard(){
         if(flippedCard.length < 2){
@@ -66,7 +88,8 @@
                 flippedCard = [];
 
                 if(matches === 7){
-                    gameOver();
+                    nextFase();
+                    zeraTime();
                 }
             }
         }
@@ -79,6 +102,7 @@
             flippedCard = [];
         }
     }
+
     function tenteaSorte(oldArray){
         var newArray = [];
         while(newArray.length !== oldArray.length){
@@ -92,9 +116,44 @@
         return newArray;
 
     }
+    function relogio(){
+        interval = setInterval(() => {
+            if(true){
+                milesimo += 10;
+                if(milesimo === 1000){
+                    segundos++;
+                    milesimo = 0;
+                }
+                if(segundos === 25){
+                     gameOver();
+                     zeraTime();
+                }
+            }
+            minutosLt.textContent = formTime(minutos);
+            segundosLt.textContent = formTime(segundos);
+            milesimoLt.textContent = milesimo;
+        }, 10);
+    }
+    function formTime(time){
+        return time < 10 ?  `0${time}` : time;
+    }
+    function zeraTime(){
+        clearInterval(interval);
+        minutos = 0;
+        segundos = 0;
+        milesimo = 0;
+
+        minutosLt.textContent = minutos;
+        segundosLt.textContent = segundos;
+        milesimoLt.textContent = milesimo;
+    }
+
+    function nextFase(){
+        modalNextFase.style.zIndex = 10;
+    }
 
     function gameOver(){
-        modalGameOver.style.zIndex = 10;
+        modalGameOver.style.zIndex = 8;
     }
     function matchAcerto(){
         acerto.style.zIndex = 1;
